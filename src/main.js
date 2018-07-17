@@ -9,7 +9,7 @@ form.addEventListener('submit', (event) => {
         form.title.classList.add('error');
         setVisibility(form.querySelector('.error-message'), true);
     } else {
-        fetch(`${URL}&t=${value}`)
+        fetch(`${URL}&s=${value}`)
             .then(response => response.json())
             .then(data => console.log(data))
         form.title.classList.remove('error');
@@ -19,6 +19,8 @@ form.addEventListener('submit', (event) => {
 
 function setVisibility(element, isError) {
     isError ?
-        element.classList.add('visible') :
+        element.classList.add('visible1') :
         element.classList.remove('visible');
 }
+
+function generateResultCards() {}
